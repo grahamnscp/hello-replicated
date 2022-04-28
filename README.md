@@ -43,5 +43,7 @@ $ curl localhost:8080/hello/ignoredtextafteruri
 | |___ / _ \| |  | |   / _ \
 |  _  |  __/| |__| |__| (_) |
 |_| |_|\___/ \___|\___|\___/
+
+[04-28-2022 09:46:16.49] Container hostname: b5c935d605cc
 ```
 
