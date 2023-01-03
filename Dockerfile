@@ -1,6 +1,9 @@
-FROM golang:latest AS compile
+FROM golang:1.8-alpine AS compile
 COPY hello-replicated.go /go
 RUN go build hello-replicated.go
-USER nobody:nogroup
+
+FROM alpine:latest
+COPY --from=compile /go/hello-replicated /
+USER nobody:nobody
 EXPOSE 8080
-ENTRYPOINT ["/go/hello-replicated"]
+ENTRYPOINT ["/hello-replicated"]

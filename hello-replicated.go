@@ -42,6 +42,7 @@ func index(w http.ResponseWriter, r *http.Request) {
   fmt.Fprint(w,"\n")
   dt := time.Now()
   fmt.Fprint(w,"[", dt.Format("01-02-2006 15:04:05.00"), "] ", "Container hostname: ", Hostname, "\n")
+  fmt.Println("[",dt.Format("01-02-2006 15:04:05.00"),"defaultHandler]","Container hostname:",Hostname)
 }
 
 func helloHandler(w http.ResponseWriter, r *http.Request) {
@@ -55,6 +56,7 @@ func helloHandler(w http.ResponseWriter, r *http.Request) {
   fmt.Fprint(w,"\n")
   dt := time.Now()
   fmt.Fprint(w,"[", dt.Format("01-02-2006 15:04:05.00"), "] ", "Container hostname: ", Hostname, "\n")
+  fmt.Println("[",dt.Format("01-02-2006 15:04:05.00"),"helloHandler]","Container hostname:",Hostname)
 }
 
 func dockerHandler(w http.ResponseWriter, r *http.Request) {
@@ -68,6 +70,7 @@ func dockerHandler(w http.ResponseWriter, r *http.Request) {
   fmt.Fprint(w,"\n")
   dt := time.Now()
   fmt.Fprint(w,"[", dt.Format("01-02-2006 15:04:05.00"), "] ", "Container hostname: ", Hostname, "\n")
+  fmt.Println("[",dt.Format("01-02-2006 15:04:05.00"),"dockerHandler]","Container hostname:",Hostname)
 }
 
 func whaleHandler(w http.ResponseWriter, r *http.Request) {
@@ -84,6 +87,7 @@ func whaleHandler(w http.ResponseWriter, r *http.Request) {
   fmt.Fprint(w,"\n")
   dt := time.Now()
   fmt.Fprint(w,"[", dt.Format("01-02-2006 15:04:05.00"), "] ", "Container hostname: ", Hostname, "\n")
+  fmt.Println("[",dt.Format("01-02-2006 15:04:05.00"),"whaleHandler]","Container hostname:",Hostname)
 }
 
 func replicatedHandler(w http.ResponseWriter, r *http.Request) {
@@ -98,5 +102,6 @@ func replicatedHandler(w http.ResponseWriter, r *http.Request) {
   fmt.Fprint(w,"\n")
   dt := time.Now()
   fmt.Fprint(w,"[", dt.Format("01-02-2006 15:04:05.00"), "] ", "Container hostname: ", Hostname, "\n")
+  fmt.Println("[",dt.Format("01-02-2006 15:04:05.00"),"replicatedHandler]","Container hostname:",Hostname)
 }
 
