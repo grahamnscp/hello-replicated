@@ -1,4 +1,4 @@
-FROM golang:1.8-alpine AS compile
+FROM golang:alpine AS compile
 COPY hello-replicated.go /go
 RUN go build hello-replicated.go
 
